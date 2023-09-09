@@ -17,7 +17,7 @@ import lab.webpost.domain.User;
 public class PostResourceTest {
 
     @Autowired
-    PostRepository repository;
+   private PostRepository repository;
 
     @BeforeEach
     public void setUp() {
@@ -46,7 +46,8 @@ public class PostResourceTest {
     @Test
     public void testDelete(){
         repository.deleteAll();
-        List<Post> posts = repository.findAll();
+        // List<Post> posts = repository.findAll();
+        List<Post> posts = repository.findALL();
         assertEquals(0, posts.size());
     }
 }
